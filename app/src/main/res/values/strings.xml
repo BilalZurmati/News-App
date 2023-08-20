@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_source"><u>Change Source</u></string>
+    <string name="sources">Sources</string>
+    <string name="fetching_news">Fetching headlines..</string>
+    <string name="detail_screen">Detail Screen</string>
+    <string name="welcome">Welcome</string>
+    <string name="sorry_you_wont_continue">Sorry you won\'t be able to continue without this authentication.</string>
+    <string name="authenticate">Authenticate</string>
+</resources>
