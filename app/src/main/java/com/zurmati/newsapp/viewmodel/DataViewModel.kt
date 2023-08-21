@@ -63,19 +63,7 @@ class DataViewModel : ViewModel() {
                             response: Response<NewsResponse>
                         ) {
                             if (response.isSuccessful) {
-                                val sortedArticles = response.body()?.articles?.sortedBy {
-                                    SimpleDateFormat(
-                                        "yyyy-MM-dd'T'HH:mm:ss'Z'",
-                                        Locale.US
-                                    ).parse(it.publishedAt ?: "2023-08-20T13:49:01Z")
-                                }
-
-                                val newsResponse = NewsResponse(
-                                    response.body()?.status,
-                                    response.body()?.totalResults,
-                                    sortedArticles?.reversed()?.toMutableList()!!
-                                )
-                                news.value = NewsState.Data(newsResponse)
+                                news.value = NewsState.Data(response.body()!!)
                             } else
                                 news.value = NewsState.Error(response.message())
                         }
